@@ -1,5 +1,4 @@
 <?php
-require_once(PATH_t3lib.'class.t3lib_page.php');
 $GLOBALS['TSFE'] = t3lib_div::makeInstance('tslib_fe', $GLOBALS['TYPO3_CONF_VARS'], 0, 0);
 $GLOBALS['TSFE']->sys_page = t3lib_div::makeInstance('t3lib_pageSelect');
 

@@ -1,0 +1,12 @@
+plugin.tx_filehits {
+	persistence {
+		classes {
+			Tx_Extbase_Domain_Model_FrontendUser {
+				mapping {
+					tableName = fe_users
+				}
+			}
+		}
+		storagePid =
+	}
+}

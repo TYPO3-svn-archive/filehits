@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'filehits'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_filehits_domain_model_filehit">Filehit</label>
+			<label index="tx_filehits_domain_model_filehit.fe_user">Frontend user</label>
+			<label index="tx_filehits_domain_model_filehit.file">Full filepath</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tx_filehits_domain_model_filehit">Filehit</label>
+			<label index="tx_filehits_domain_model_filehit.fe_user">Frontend Benutzer</label>
+			<label index="tx_filehits_domain_model_filehit.file">Vollständiger Dateipfad</label>
+		</languageKey>
+	</data>
+</T3locallang>

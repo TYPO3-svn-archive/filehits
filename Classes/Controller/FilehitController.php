@@ -61,13 +61,16 @@ class Tx_Filehits_Controller_FilehitController extends Tx_Extbase_MVC_Controller
 
 		$GLOBALS['TSFE']->fe_user = tslib_eidtools::initFeUser();
 
+		if (!$GLOBALS['TSFE']->fe_user->user) {
+			// TODO: Make the id configurable
+			header('Location: /?id=78');
+			return;
+		}
+		$currentUserUid = $GLOBALS['TSFE']->fe_user->user['uid'];
+
 		if (!file_exists(PATH_site . $requestedFile) || !is_file(PATH_site . $requestedFile)) {
 			throw new Exception('The requested file was not found on the server!');
 		}
-		if (!$GLOBALS['TSFE']->fe_user->user) {
-			throw new Exception('You have to be logged in to access the requested file!');
-		}
-		$currentUserUid = $GLOBALS['TSFE']->fe_user->user['uid'];
 
 		/** @var $existingFilehit Tx_Filehits_Domain_Model_Filehit */
 		$existingFilehit = $this->filehitRepository->findOneByFileAndUser($requestedFile, $currentUserUid);
